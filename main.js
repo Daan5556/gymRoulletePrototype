@@ -7,7 +7,7 @@ var formattedDate = day + "/" + month + "/" + year
 document.getElementById("currentDate").innerText = formattedDate
 
 // get random int
-var seed = currentDate.getDate();
+var seed = currentDate.getFullYear() * 10000 + (currentDate.getMonth() + 1) * 100 + currentDate.getDate();
 function getRandomInt(min, max) {
     var x = Math.sin(seed++) * 10000;
     return Math.floor((x - Math.floor(x)) * (max - min + 1)) + min;
