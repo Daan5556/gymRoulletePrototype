@@ -1,0 +1,81 @@
+:root{
+    --background-color: #F56D4A;
+    --confirm-color: #27E312;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+h1{
+    font-family: Aptly;
+    font-weight: normal;
+    color: white;
+    font-size: 4rem;
+}
+h2{
+    font-family: nimbus-sans, sans-serif;
+    color: white;
+    font-weight: normal;
+    font-size: 1rem;
+}
+h3{
+    font-family: Calibri;
+    font-weight: normal;
+}
+h4{
+    font-family: Impact;
+    font-weight: normal;
+    font-size: 2rem;
+
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contentWrapper,
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.variableBox,
+.specialEvent{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.mainVariable{
+    margin-bottom: 60px;
+}
+
+.specialEvent{
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.specialEvent h1{
+    font-size: 2rem;
+}
+
+.fa-solid{
+    font-size: 2rem;
+}
