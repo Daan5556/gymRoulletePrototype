@@ -7,7 +7,7 @@ var formattedDate = day + "/" + month + "/" + year
 document.getElementById("currentDate").innerText = formattedDate 
 
 // get random int
-var seed = currentDate.getFullYear() * 10000 + (currentDate.getMonth() + 1) * 100 + currentDate.getDate();
+var seed = currentDate.getFullYear() * 10000 + (currentDate.getMonth() + 12) * 100 + currentDate.getDate();
 function getRandomInt(min, max) {
     var x = Math.sin(seed++) * 10000;
     return Math.floor((x - Math.floor(x)) * (max - min + 1)) + min;
@@ -36,7 +36,6 @@ var denyOutput = [
     "Close, but no cigar!",
     "Not this time!",
     "Next time for sure!",
-    "Fate intervened!",
     "Just shy of it!",
     "Almost nailed it!"
   ];
@@ -85,4 +84,6 @@ function isChallangeActive(percentInt) {
 isVarActive("music", 40);
 isVarActive("drink", 15);
 isVarActive("share", 20);
-isChallangeActive(50)
+isVarActive("snack", 30);
+isVarActive("chess", 20);
+isChallangeActive(50);

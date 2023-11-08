@@ -17,6 +17,10 @@ body{
     min-height: 100vh;
 }
 
+a{
+    text-decoration: none;
+}
+
 h1{
     font-family: Aptly;
     font-weight: normal;
@@ -36,8 +40,12 @@ h3{
 h4{
     font-family: Impact;
     font-weight: normal;
-    font-size: 2rem;
+    font-size: 1.7rem;
 
+}
+
+h4#supriseChallenge{
+    text-align: center;
 }
 
 header{
