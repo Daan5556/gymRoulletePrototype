@@ -4,7 +4,7 @@ var day = currentDate.getDate();
 var month = (currentDate.getMonth() + 1);
 var year = currentDate.getFullYear();
 var formattedDate = day + "/" + month + "/" + year
-document.getElementById("currentDate").innerText = formattedDate
+document.getElementById("currentDate").innerText = formattedDate 
 
 // get random int
 var seed = currentDate.getFullYear() * 10000 + (currentDate.getMonth() + 1) * 100 + currentDate.getDate();
@@ -41,6 +41,14 @@ var denyOutput = [
     "Almost nailed it!"
   ];
 
+var supriseChallengeOutput = [
+  "Planking",
+  "Burpee Blitz",
+  "Mountain Climber Mayhem",
+  "Lunge Explosion",
+  "Jump Rope Jam"
+];
+
 // Check if variable is active & replace
 function isVarActive(variable, percentInt) {
     var roofNumber = 100 / percentInt
@@ -58,9 +66,23 @@ function isVarActive(variable, percentInt) {
     }
 }
 
-var usedIndices = [];
+function isChallangeActive(percentInt) {
+    var roofNumber = 100 / percentInt
+    if (getRandomInt(1, roofNumber) === 1) {
+    let challenge = supriseChallengeOutput[getRandomInt(0, supriseChallengeOutput.length - 1)]
 
+    let targetElement = document.getElementById('supriseChallenge')
+    targetElement.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> ${challenge}`
+    targetElement.style.color = "#27E312"
+    }
+    else {
+      let deny = denyOutput[getRandomInt(0, denyOutput.length - 1)]
+      let targetElement = document.getElementById('supriseChallenge')
+      targetElement.innerHTML = deny
+      }
+}
 
-isVarActive("music", 50);
+isVarActive("music", 40);
 isVarActive("drink", 15);
 isVarActive("share", 20);
+isChallangeActive(50)
